@@ -12,6 +12,9 @@ This project aims to develop an AI-driven surveillance system that utilizes deep
 7. [Meeting Evaluating Criteria](#meeting-evaluating-criteria)
 9. [Meet the Team](#meet-the-team)
 
+## 📂**Project Directory Structure**
+
+
 ## **Features**
 - **Real-time threat detection**: Detects weapons, fights, and other suspicious activities.
 - **Deep learning-based analysis**: Utilizes CNNs, RNNs, or transformer-based models.
@@ -32,7 +35,7 @@ This project aims to develop an AI-driven surveillance system that utilizes deep
 - Data augmentation and preprocessing for better model performance.
 
 
-## **Installation**
+## 📦**Installation**
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-repo/autonomous-threat-detection.git
@@ -41,6 +44,64 @@ This project aims to develop an AI-driven surveillance system that utilizes deep
    ```bash
    pip install -r requirements.txt
 3. Download and prepare the dataset.
+
+
+## 📊 Project Workflow 
+![Project Workflow](Flowchart.png)
+
+## 🏗 **Model Architecture**
+**1. Feature Extraction Model**
+- Uses InceptionV3 (pre-trained on ImageNet).
+- Extracts 2048-dimensional feature vectors from video frames
+```python
+def build_feature_extractor
+input_shape=(224, 299, 3):
+    feature_extractor = tf.keras.applications.InceptionV3(
+        weights="imagenet",
+        include_top=False,
+        pooling="avg",
+        input_shape=input_shape,
+    )
+    preprocess_input = tf.keras.applications.inception_v3.preprocess_input
+
+    inputs = tf.keras.Input(input_shape)
+    preprocessed = preprocess_input(inputs)
+
+    outputs = feature_extractor(preprocessed)
+    return tf.keras.Model(inputs, outputs, name="feature_extractor")
+```
+
+**2. Sequence Classification Model**
+- Uses LSTM layers to process sequential features.
+- Includes Dropout (0.4) and Dense layers for final classification.
+- Trained on crime video datasets.
+```python
+def get_sequence_model():
+    class_vocab = label_processor.get_vocabulary()
+
+    frame_features_input = tf.keras.Input((MAX_SEQ_LENGTH, NUM_FEATURES))
+    
+    x = tf.keras.layers.LSTM(256, return_sequences=True)(frame_features_input)
+    x = tf.keras.layers.LSTM(128)(x)
+    x = tf.keras.layers.Dropout(0.4)(x)
+    x = tf.keras.layers.Dense(32, activation="relu")(x)
+    output = tf.keras.layers.Dense(len(class_vocab), activation="softmax")(x)
+
+    rnn_model = tf.keras.Model(frame_features_input, output)
+
+    rnn_model.compile(
+        loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"]
+    )
+    return rnn_model
+```
+
+## 📊 **Model Performance**
+| Model                           | Purpose                                      | Architecture                                      | Accuracy                |
+|--------------------------------|----------------------------------------------|--------------------------------------------------|------------------------|
+| InceptionV3 Feature Extractor | Extracts spatial features from video frames | Pre-trained InceptionV3                         | Used for feature extraction |
+| LSTM-based Sequence Model     | Classifies crime activities from extracted features | LSTM (256 → 128), Dense, Softmax | 87.7% |
+---
+
 
 ## **Meet The Team:**
 1. **Aryan Paratakke**:
