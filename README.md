@@ -47,7 +47,7 @@ This project aims to develop an AI-driven surveillance system that utilizes deep
 
 
 ## 📊 Project Workflow 
-![Project Workflow](Flowchart.png)
+![Project Workflow](Images/Flowchart.png)
 
 ## 🏗 **Model Architecture**
 **1. Feature Extraction Model**
