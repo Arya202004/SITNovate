@@ -81,9 +81,11 @@ const Index = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">AI Models</h3>
             <p className="text-gray-600 dark:text-gray-400">
-            1. Weapon Detection (CNNs) – Detects guns, knives, explosives.
-            2. Behavior Analysis (RNNs) – Identifies fights, aggression, and anomalies.
-            3. Anomaly Detection (Unsupervised Learning) – Detects unusual movement and loitering.Uses CNNs
+            <ol style={{ listStyleType: "disc", marginLeft: "20px" }}>
+            <li> Weapon Detection (CNNs) – Detects guns, knives, explosives.</li>
+            <li> Behavior Analysis (RNNs) – Identifies fights, aggression, and anomalies.</li>
+            <li> Anomaly Detection (Unsupervised Learning) – Detects unusual movement and loitering.Uses CNNs</li>
+            </ol>
             </p>
           </div>
           
@@ -93,10 +95,12 @@ const Index = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">Key Features</h3>
             <p className="text-gray-600 dark:text-gray-400">
-            1. Real-Time Processing – Instant threat detection.
-            2. Smart Alerts & Notifications – Notifies security teams instantly.
-            3. Seamless CCTV Integration – Works with existing cameras.
-            4. Cloud & On-Premises Support – Scalable and flexible.
+            <ol style={{ listStyleType: "disc", marginLeft: "20px" }}>
+            <li> Real-Time Processing – Instant threat detection.</li>
+            <li> Smart Alerts & Notifications – Notifies security teams instantly.</li>
+            <li> Seamless CCTV Integration – Works with existing cameras.</li>
+            <li> Cloud & On-Premises Support – Scalable and flexible.</li>
+            </ol>
             </p>
           </div>
           
@@ -106,10 +110,10 @@ const Index = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">Case Studies & Use Cases</h3>
             <p className="text-gray-600 dark:text-gray-400">
-            <ol>
-             <li>. Airports, metro stations, malls.</li> 
-             <li>. Schools, universities, corporate offices.</li> 
-             <li>. Government security & law enforcement.</li>
+            <ol style={{ listStyleType: "disc", marginLeft: "20px" }}>
+             <li> Airports, metro stations, malls.</li> 
+             <li> Schools, universities, corporate offices.</li> 
+             <li> Government security & law enforcement.</li>
             </ol>
             </p>
           </div>
@@ -118,9 +122,9 @@ const Index = () => {
 
       {/* Latest Projects Preview */}
       <section className="container mx-auto px-6 pb-32">
-        <h2 className="text-3xl font-bold mb-12 text-center animate-fade-up">Latest Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((i) => (
+        <h2 className="text-3xl font-bold mb-12 text-center animate-fade-up">Latest Analysis of Threats</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+          {[1].map((i) => (
             <div 
               key={i} 
               className="glass overflow-hidden rounded-2xl hover:scale-105 transition-transform animate-fade-up"
@@ -128,9 +132,46 @@ const Index = () => {
             >
               <div className="h-48 bg-gradient-to-br from-primary/30 to-purple-500/30 animate-gradient" />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Project {i}</h3>
+                <h3 className="text-xl font-semibold mb-2">Reference Articles</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  A brief description of the project and its impact on AI research.
+                <ul style={{ listStyleType: "disc", marginLeft: "20px" }}>
+        <li>
+          <a
+            href="https://en.wikipedia.org/wiki/Encounter_killing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Encounter Killings in India - a notable phenomenon in the country is the occurrence of encounter killings, a term used to describe extrajudicial killings by law enforcement agencies. (Wikipedia)
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://timesofindia.indiatimes.com/topic/shooting-incident"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Latest Shooting Incidents - Specific data on shooting incidents are included under broader categories like murder or violent crimes. (Times of India)
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.hindustantimes.com/india-news"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Latest Crime News - Recent crime incidents in India have drawn significant attention, highlighting ongoing concerns about violence and public safety. (Hindustan Times)
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.thehindu.com/news/national/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            National Security & Crime Reports - The Hindu is a prominent Indian newspaper that provides extensive coverage on national security and crime-related news. (The Hindu)
+          </a>
+        </li>
+      </ul> 
                 </p>
                 <a 
                   href="#" 
