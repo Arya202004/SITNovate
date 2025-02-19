@@ -42,7 +42,7 @@ This project aims to develop an AI-driven surveillance system that utilizes deep
    pip install -r requirements.txt
 3. Download and prepare the dataset.
 
-## **Meet The Team:**
+## **Meet The Team**
 1. **Aryan Paratakke**:
 
    - **GitHub**: [Aryan Paratakke GitHub](https://github.com/Aryan152005/)
