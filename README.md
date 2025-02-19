@@ -103,7 +103,7 @@ def get_sequence_model():
 ---
 
 
-## **Meet The Team:**
+## **Meet The Team**
 1. **Aryan Paratakke**:
 
    - **GitHub**: [Aryan Paratakke GitHub](https://github.com/Aryan152005/)
