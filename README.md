@@ -1,69 +1,116 @@
-# Welcome to your Lovable project
+# **Autonomous Threat Detection in Video Surveillance**
 
-## Project info
+## **Overview**
+This project aims to develop an AI-driven surveillance system that utilizes deep learning for real-time threat detection in crowded areas. The system will identify potential threats such as weapons, violent activities, and suspicious behavior, enhancing public safety and security.
 
-**URL**: https://lovable.dev/projects/c578370e-b8fe-4386-9451-b4dbc2f09b63
+1. [Problem Statement](#problem-statement) 
+2. [Features](#features)
+3. [Dataset](#dataset)
+4. [Installation](#installation)
+5. [Implementation](#implementation)
+6. [Deployment & Future Enhancements](#deployment--future-enhancements)
+7. [Meeting Evaluating Criteria](#meeting-evaluating-criteria)
+9. [Meet the Team](#meet-the-team)
 
-## How can I edit this code?
+## **Features**
+- **Real-time threat detection**: Detects weapons, fights, and other suspicious activities.
+- **Deep learning-based analysis**: Utilizes CNNs, RNNs, or transformer-based models.
+- **Crowded scene monitoring**: Optimized for high-density public areas.
+- **Automated alerts**: Sends real-time notifications to security personnel.
+- **Scalability**: Works across multiple surveillance cameras.
 
-There are several ways of editing your application.
+## **Technologies Used**
+- **Programming Languages**: Python
+- **Deep Learning Frameworks**: TensorFlow / PyTorch
+- **Computer Vision**: OpenCV, YOLO 
+- **Video Processing**: OpenCV
+- **Cloud & Edge Deployment**: AWS
 
-**Use Lovable**
+## **Dataset**
+- Open-source datasets like UCF-Crime Dataset, or custom-annotated video footage.
+- References: https://github.com/ayush9304/Criminal-Activity-Video-Surveillance-using-Deep-Learning/tree/main/Data
+- Data augmentation and preprocessing for better model performance.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c578370e-b8fe-4386-9451-b4dbc2f09b63) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦**Installation**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/autonomous-threat-detection.git
+   cd autonomous-threat-detection
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Download and prepare the dataset.
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📊 Project Workflow 
+![Project Workflow](Images/Flowchart.png)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🏗 **Model Architecture**
+**1. Feature Extraction Model**
+- Uses InceptionV3 (pre-trained on ImageNet).
+- Extracts 2048-dimensional feature vectors from video frames
+```python
+def build_feature_extractor
+input_shape=(224, 299, 3):
+    feature_extractor = tf.keras.applications.InceptionV3(
+        weights="imagenet",
+        include_top=False,
+        pooling="avg",
+        input_shape=input_shape,
+    )
+    preprocess_input = tf.keras.applications.inception_v3.preprocess_input
 
-Follow these steps:
+    inputs = tf.keras.Input(input_shape)
+    preprocessed = preprocess_input(inputs)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+    outputs = feature_extractor(preprocessed)
+    return tf.keras.Model(inputs, outputs, name="feature_extractor")
 ```
 
-**Edit a file directly in GitHub**
+**2. Sequence Classification Model**
+- Uses LSTM layers to process sequential features.
+- Includes Dropout (0.4) and Dense layers for final classification.
+- Trained on crime video datasets.
+```python
+def get_sequence_model():
+    class_vocab = label_processor.get_vocabulary()
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+    frame_features_input = tf.keras.Input((MAX_SEQ_LENGTH, NUM_FEATURES))
+    
+    x = tf.keras.layers.LSTM(256, return_sequences=True)(frame_features_input)
+    x = tf.keras.layers.LSTM(128)(x)
+    x = tf.keras.layers.Dropout(0.4)(x)
+    x = tf.keras.layers.Dense(32, activation="relu")(x)
+    output = tf.keras.layers.Dense(len(class_vocab), activation="softmax")(x)
 
-**Use GitHub Codespaces**
+    rnn_model = tf.keras.Model(frame_features_input, output)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+    rnn_model.compile(
+        loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"]
+    )
+    return rnn_model
+```
 
-## What technologies are used for this project?
+## 📊 **Model Performance**
+| Model                           | Purpose                                      | Architecture                                      | Accuracy                |
+|--------------------------------|----------------------------------------------|--------------------------------------------------|------------------------|
+| InceptionV3 Feature Extractor | Extracts spatial features from video frames | Pre-trained InceptionV3                         | Used for feature extraction |
+| LSTM-based Sequence Model     | Classifies crime activities from extracted features | LSTM (256 → 128), Dense, Softmax | 87.7% |
+---
 
-This project is built with .
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## **Meet The Team**
+1. **Aryan Paratakke**:
 
-## How can I deploy this project?
+   - **GitHub**: [Aryan Paratakke GitHub](https://github.com/Aryan152005/)
+   - **LinkedIn**: [Aryan Paratakke LinkedIn](https://in.linkedin.com/in/aryan-paratakke-43b879276)
 
-Simply open [Lovable](https://lovable.dev/projects/c578370e-b8fe-4386-9451-b4dbc2f09b63) and click on Share -> Publish.
+2. **Arya Hotey**:
 
-## I want to use a custom domain - is that possible?
+   - **GitHub**: [Arya Hotey GitHub](https://github.com/Arya202004)
+   - **LinkedIn**: [Arya Hotey LinkedIn](https://in.linkedin.com/in/arya-hotey-aab5b32a7)
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+3. **Nishtha Kashyap**:
+   - **GitHub**: [Nishtha Kashyap GitHub](https://github.com/nishtha932005)
+   - **LinkedIn**: [Nishtha Kashyap LinkedIn](https://in.linkedin.com/in/nishtha-kashyap-0b6846293)
