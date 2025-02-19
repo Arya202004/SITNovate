@@ -12,9 +12,6 @@ This project aims to develop an AI-driven surveillance system that utilizes deep
 7. [Meeting Evaluating Criteria](#meeting-evaluating-criteria)
 9. [Meet the Team](#meet-the-team)
 
-## 📂**Project Directory Structure**
-
-
 ## **Features**
 - **Real-time threat detection**: Detects weapons, fights, and other suspicious activities.
 - **Deep learning-based analysis**: Utilizes CNNs, RNNs, or transformer-based models.
