@@ -44,11 +44,14 @@ export const Navigation = () => {
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between h-20">
           <Link to="/" className="text-2xl font-bold">
-            Sitnovate
+            Netrum
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
+          <Link to="/" className="hover:text-primary transition-colors">
+              Home
+            </Link>
             <Link to="/about" className="hover:text-primary transition-colors">
               About
             </Link>

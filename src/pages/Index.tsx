@@ -40,8 +40,7 @@ const Index = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              Explore our collection of cutting-edge AI and machine learning projects, 
-              pushing the boundaries of what's possible.
+            AI-Powered Threat Detection for Safer Environments. AI-powered recognition of weapons, fights, and suspicious behavior that also Identifies unusual movements and behaviors and sends alerts to security teams in real time.
             </p>
             <div className="flex gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <a 
@@ -82,7 +81,9 @@ const Index = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4">AI Models</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              State-of-the-art machine learning models for various applications.
+            1. Weapon Detection (CNNs) – Detects guns, knives, explosives.
+            2. Behavior Analysis (RNNs) – Identifies fights, aggression, and anomalies.
+            3. Anomaly Detection (Unsupervised Learning) – Detects unusual movement and loitering.Uses CNNs
             </p>
           </div>
           
@@ -90,9 +91,12 @@ const Index = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
               <Code className="text-primary animate-pulse" size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-4">Code Examples</h3>
+            <h3 className="text-xl font-semibold mb-4">Key Features</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Clear, documented code samples to help you implement AI solutions.
+            1. Real-Time Processing – Instant threat detection.
+            2. Smart Alerts & Notifications – Notifies security teams instantly.
+            3. Seamless CCTV Integration – Works with existing cameras.
+            4. Cloud & On-Premises Support – Scalable and flexible.
             </p>
           </div>
           
@@ -100,9 +104,13 @@ const Index = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
               <Share2 className="text-primary animate-pulse" size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-4">Research Papers</h3>
+            <h3 className="text-xl font-semibold mb-4">Case Studies & Use Cases</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Latest research and findings in artificial intelligence.
+            <ol>
+             <li>. Airports, metro stations, malls.</li> 
+             <li>. Schools, universities, corporate offices.</li> 
+             <li>. Government security & law enforcement.</li>
+            </ol>
             </p>
           </div>
         </div>
