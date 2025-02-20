@@ -124,14 +124,26 @@ def get_sequence_model():
 
 🔗 **API Availability**  
 - Provides **RESTful APIs** and SDKs for integration into:  
-  - Surveillance systems – Enhances existing security setups.  
-  - Law enforcement – Assists with crime prevention.  
-  - Smart cities – Enables automated urban security solutions.  
+- Surveillance systems – Enhances existing security setups.  
+- Law enforcement – Assists with crime prevention.  
+- Smart cities – Enables automated urban security solutions.  
 
 🤖 **Self-Learning AI Models**  
 - **Continuously improves** by learning from new threat patterns and security incidents.  
 - Adapts to **changing environments and evolving threat tactics**.   
 
+
+
+
+## ⚠️ Severity Levels  
+
+The AI model categorizes detected threats into three severity levels based on the nature of the incident and the confidence of detection.  
+
+| Severity Level | Description | AI Confidence |
+|--------------|-------------|--------------|
+| 🔴 **High Severity** | **Serious crimes** such as **armed violence, riots, or terrorism** that require immediate action. | **High Confidence** ✅ |
+| 🟠 **Moderate Severity** | **Moderate threats** such as **physical altercations, trespassing, or vandalism**. | **High Confidence** ✅ |
+| 🟢 **Low Severity** | **Minor incidents** like **suspicious behavior, loitering, or possible false positives**. | **Uncertain / Low Confidence** ⚠️ |
 ---
 ## 🏆**Meeting Evaluation Criteria**
 ### **1. Innovation** 
