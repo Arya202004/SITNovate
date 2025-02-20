@@ -103,7 +103,28 @@ def get_sequence_model():
 | LSTM-based Sequence Model     | Classifies crime activities from extracted features | LSTM (256 → 128), Dense, Softmax | 87.7% |
 ---
 
+## 🏆**Meeting Evaluation Criteria**
+### **1. Innovation** 
+- **Creativity:** Uses deep learning models to detect weapons, violence, and unusual activities.  
+- **Uniqueness:** Advanced AI-driven threat detection with real-time alerts, unlike traditional surveillance.  
 
+### **2. Scalability**  
+- **Architecture:** Optimized AI models for cloud-based and edge-device deployment.  
+- **Load Balancing:** Efficient processing of multiple CCTV feeds in real time.  
+
+### **3. Technical Implementation**  
+- **Development:** Robust AI pipeline with dataset preprocessing, training, and deployment.  
+- **Efficiency:** Optimized real-time processing with minimal latency and false alarms.  
+
+### **4. Presentation**  
+- **Clarity:** Well-documented project with structured code and deployment guides.  
+- **Effectiveness:** Demonstrates real-world application through case studies or simulations.  
+
+### **5. Impact**  
+- **Relevance:** Addresses critical security concerns in public spaces.  
+- **Potential:** Can be integrated with law enforcement and smart city initiatives.  
+
+---
 ## **Meet The Team**
 1. **Aryan Paratakke**:
 
