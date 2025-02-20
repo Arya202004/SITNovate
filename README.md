@@ -7,10 +7,14 @@ This project aims to develop an AI-driven surveillance system that utilizes deep
 2. [Features](#features)
 3. [Dataset](#dataset)
 4. [Installation](#installation)
-5. [Implementation](#implementation)
-6. [Deployment & Future Enhancements](#deployment--future-enhancements)
-7. [Meeting Evaluating Criteria](#meeting-evaluating-criteria)
+5. [Project Workflow](#project-workflow)
+6. [Model Architecture](#model-architecture)
+7. [Model Performance](#model-performance)
+8. [Meeting Evaluating Criteria](#meeting-evaluating-criteria)
 9. [Meet the Team](#meet-the-team)
+
+## **Problem Statement**
+Create an AI-driven surveillance system that uses deep learning for real-time threat detection, including weapons, violence, and suspicious activities in crowded areas. 
 
 ## **Features**
 - **Real-time threat detection**: Detects weapons, fights, and other suspicious activities.
