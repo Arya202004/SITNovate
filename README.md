@@ -104,6 +104,35 @@ def get_sequence_model():
 | LSTM-based Sequence Model     | Classifies crime activities from extracted features | LSTM (256 → 128), Dense, Softmax | 87.7% |
 ---
 
+## 📊**Model Deployment**
+
+🔴 **Real-Time & Scalable**  
+- Monitors multiple **CCTV feeds** simultaneously for instant threat detection.  
+- **Low-latency AI models** provide **real-time alerts** to security teams.  
+
+☁️ **Cloud & Edge AI Integration**  
+- Runs on **cloud servers** for large-scale, centralized processing.  
+- Supports **edge devices** like **Jetson Nano & Raspberry Pi** for **on-site AI inference**, reducing cloud dependency and enhancing privacy.  
+
+🧠 **AI-Powered Threat Recognition**  
+- Detects **suspicious activities**, **unattended objects**, **intrusions**, and **violent behavior** using deep learning.  
+- Recognizes weapons, face coverings, and unusual movements to prevent potential threats.  
+
+📡 **Intelligent Alert System**  
+- Sends **instant notifications** via **email, SMS, or push alerts** upon detecting threats.  
+- Integrates with **emergency response systems** for **automatic lockdowns or alarms**.  
+
+🔗 **API Availability**  
+- Provides **RESTful APIs** and SDKs for integration into:  
+  - Surveillance systems – Enhances existing security setups.  
+  - Law enforcement – Assists with crime prevention.  
+  - Smart cities – Enables automated urban security solutions.  
+
+🤖 **Self-Learning AI Models**  
+- **Continuously improves** by learning from new threat patterns and security incidents.  
+- Adapts to **changing environments and evolving threat tactics**.   
+
+---
 ## 🏆**Meeting Evaluation Criteria**
 ### **1. Innovation** 
 - **Creativity:** Uses deep learning models to detect weapons, violence, and unusual activities.  
