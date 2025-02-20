@@ -132,10 +132,8 @@ def get_sequence_model():
 - **Continuously improves** by learning from new threat patterns and security incidents.  
 - Adapts to **changing environments and evolving threat tactics**.   
 
-
-
-
-## ⚠️ Severity Levels  
+![vhg]()
+## ⚠️ **Severity Levels**  
 
 The AI model categorizes detected threats into three severity levels based on the nature of the incident and the confidence of detection.  
 
